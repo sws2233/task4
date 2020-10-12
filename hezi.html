@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+@keyframes zhuan{
+			0%{
+				transform: rotate3d(80, 45, 360,0deg );
+			}
+			100%{
+				transform: rotate3d(90,180,270,360deg);
+			}
+		}
+		@keyframes zhuan1{
+			0%{
+				transform: rotateX(30deg) rotateY(-50deg) rotateZ(90deg);
+			}
+			100%{
+				transform: rotateX(-30deg) rotateY(50deg) rotateZ(-90deg);
+			}
+		}
+		.box{
+			width: 900px;
+			height: 900px;
+			/* border: 1px solid; */
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			perspective: 1200px;
+
+		}
+		.box1{
+			width: 100%;
+			height: 100%;
+			/* background: rgba(255, 0, 0, .5); */
+			/* transform: rotateX(20deg) rotateY(30deg); */
+			transform-style: preserve-3d;
+			animation: zhuan1 3s  linear  infinite;
+		}
+		.samall{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -100px;
+			margin-top: -100px;
+/* 			font-size: 180px;
+			text-align: center; */
+			background: currentcolor;
+			background: rgba(100,100,100,.5);
+			line-height: 200px;
+			
+		}
+		.small1{
+			background-color: red;
+			transform: translateZ(100px);
+		}
+		.small2{
+			background-color: green;
+			transform: rotateY(180deg) translateZ(100px);
+		}
+		.small3{
+			background-color: blue;
+			transform: rotateY(-90deg) translateZ(100px);
+		}
+		.small4{
+			background-color: yellow;
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.small5{
+			background-color: purple;
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		.small6{
+			background-color: pink;
+			transform: rotateX(-90deg) translateZ(100px);
+		}
+		.box:hover .samall{
+			box-shadow: 0 0 10px currentcolor;
+		}
+
+		.big{
+			width: 400px;
+			height: 400px;
+			/* border: 1px solid; */
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -200px;
+			margin-top: -200px;
+			background: rgba(0,0,0,.1);
+
+		}
+
+		.big1{
+			transform: translateZ(200px);
+		}
+		.big2{
+			transform: rotateY(180deg) translateZ(200px);
+		}
+		.big3{
+			transform: rotateY(-90deg) translateZ(200px);
+		}
+		.big4{
+			transform: rotateY(90deg) translateZ(200px);
+		}
+		.big5{
+			transform: rotateX(90deg) translateZ(200px);
+		}
+		.big6{
+			transform: rotateX(-90deg) translateZ(200px);
+		}
+
+
+
+		.box:hover .big1{
+			transform: translateZ(300px);
+		}
+		.box:hover .big2{
+			transform: rotateY(180deg) translateZ(300px);
+		}
+		.box:hover .big3{
+			transform: rotateY(-90deg) translateZ(300px);
+		}
+		.box:hover .big4{
+			transform: rotateY(90deg) translateZ(300px);
+		}
+		.box:hover .big5{
+			transform: rotateX(90deg) translateZ(300px);
+		}
+		.box:hover .big6{
+			transform: rotateX(-90deg) translateZ(300px);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">
+		<div class="samall small1"></div>
+		<div class="samall small2"></div>
+		<div class="samall small3"></div>
+		<div class="samall small4"></div>
+		<div class="samall small5"></div>
+		<div class="samall small6"></div>
+		<div class="big big1"></div>
+		<div class="big big2"></div>
+		<div class="big big3"></div>
+		<div class="big big4"></div>
+		<div class="big big5"></div>
+		<div class="big big6"></div>
+		</div>
+	</div>
+</body>
+</html>
